@@ -17,12 +17,6 @@ services:
       service: php-database
     networks:
       - app-tier
-  php-phpmyadmin:
-    extends:
-      file: ../binotify-app/docker-compose.yml
-      service: php-phpmyadmin
-    networks:
-      - app-tier
   rest-backend:
     extends:
       file: ../binotify-rest/docker-compose.yml
@@ -33,12 +27,6 @@ services:
     extends:
       file: ../binotify-rest/docker-compose.yml
       service: rest-database
-    networks:
-      - app-tier
-  rest-phpmyadmin:
-    extends:
-      file: ../binotify-rest/docker-compose.yml
-      service: rest-phpmyadmin
     networks:
       - app-tier
   soap-service:
