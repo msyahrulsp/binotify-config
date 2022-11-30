@@ -29,6 +29,12 @@ services:
       service: rest-database
     networks:
       - app-tier
+  redis:
+    extends:
+      file: ../binotify-rest/docker-compose.yml
+      service: redis
+    networks:
+      - app-tier
   soap-service:
     extends:
       file: ../binotify-soap/docker-compose.yml
